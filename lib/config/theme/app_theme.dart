@@ -19,7 +19,7 @@ class AppTheme {
 
   AppTheme({
     this.selectedColor = 0
-  });
+  }) : assert ( selectedColor >= 0);
 
   ThemeData theme(){
     return ThemeData(
