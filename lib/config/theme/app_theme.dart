@@ -15,10 +15,15 @@ const List<Color> _colorThemes = [
 ];
   
 class AppTheme {
+  final int selectedColor;
+
+  AppTheme({
+    this.selectedColor = 0
+  });
 
   ThemeData theme(){
     return ThemeData(
-      colorSchemeSeed: _colorThemes[1];
+      colorSchemeSeed: _colorThemes[1]
     );
 
   }
