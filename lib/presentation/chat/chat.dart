@@ -14,8 +14,22 @@ class ChatScreen extends StatelessWidget {
 
          ),
         ),
-        title: const Text('Chat'),
-        centerTitle: true),
+        title: const Text('Adam')),
+        body: _ChatView()
+    );
+  }
+}
+
+class _ChatView extends StatelessWidget {
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(child: Container(
+          color:Colors.red,
+        ))
+      ],
     );
   }
 }
