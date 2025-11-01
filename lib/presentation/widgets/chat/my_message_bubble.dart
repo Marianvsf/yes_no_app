@@ -5,6 +5,15 @@ class MyMessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('My message');
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+          ),
+          child: Text('Lorem ipsum'),
+        )
+      ],
+    );
   }
 }
