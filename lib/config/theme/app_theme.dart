@@ -19,11 +19,12 @@ class AppTheme {
 
   AppTheme({
     this.selectedColor = 0
-  }) : assert ( selectedColor >= 0 && selectedColor < _colorThemes.length -1 );
+  }) : assert ( selectedColor >= 0 && selectedColor <= _colorThemes.length -1 );
 
   ThemeData theme(){
     return ThemeData(
-      colorSchemeSeed: _colorThemes[1]
+      colorSchemeSeed: _colorThemes[selectedColor],
+      //brightness: Brightness.dark  modo oscuro
     );
 
   }
