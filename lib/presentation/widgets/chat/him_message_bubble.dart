@@ -22,7 +22,8 @@ class HimMessageBubble extends StatelessWidget {
           ),
         ), 
         const SizedBox( height: 5),
-        _ImageBubble()
+        _ImageBubble(),
+        const SizedBox( height: 10),
       ],
     );
   }
@@ -33,6 +34,12 @@ class _ImageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network("https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif");
+  final size = MediaQuery.of(context).size;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.network("https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif",
+      width: size.width * 0.7,
+      height: 150,
+      fit: BoxFit.cover,));
   }
 }
