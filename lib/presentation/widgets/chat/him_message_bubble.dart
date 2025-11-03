@@ -21,8 +21,18 @@ class HimMessageBubble extends StatelessWidget {
             child: Text('Hola', style: TextStyle( color: Colors.white),),
           ),
         ), 
-        const SizedBox( height: 5)
+        const SizedBox( height: 5),
+        _ImageBubble()
       ],
     );
+  }
+}
+
+
+class _ImageBubble extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.network("https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif");
   }
 }
