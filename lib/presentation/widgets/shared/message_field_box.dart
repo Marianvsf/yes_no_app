@@ -27,6 +27,9 @@ class MessageFieldBox extends StatelessWidget {
     );
 
     return TextFormField(
+      onTapOutside: (event) {
+        focusNode.unfocus();
+      },
       keyboardAppearance: Brightness.light,
       focusNode: focusNode,
       controller: textController,
