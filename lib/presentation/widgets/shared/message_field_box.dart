@@ -9,18 +9,28 @@ class MessageFieldBox extends StatelessWidget {
         borderSide: const BorderSide(color: Color.fromRGBO(0, 0, 0, 0)),
         borderRadius: BorderRadius.circular(40));
 
+    final textController = TextEditingController();
+
     final inputDecoration = InputDecoration(
+      hintText: "Type youur message",
       enabledBorder: outlineInputBorder,
       focusedBorder: outlineInputBorder,
       filled: true,
       suffixIcon: IconButton(
         icon: const Icon(Icons.send),
-        onPressed: () {},
+        onPressed: () {
+          final textValue = textController.value.text;
+          textController.clear();
+        },
       ),
     );
 
     return TextFormField(
+      controller: textController,
       decoration: inputDecoration,
+      onFieldSubmitted: (value) {
+        textController.clear();
+      },
     );
   }
 }
