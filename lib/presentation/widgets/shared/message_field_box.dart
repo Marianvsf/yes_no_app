@@ -10,6 +10,7 @@ class MessageFieldBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(40));
 
     final textController = TextEditingController();
+    final focusNode = FocusNode();
 
     final inputDecoration = InputDecoration(
       hintText: "Type youur message",
@@ -26,6 +27,8 @@ class MessageFieldBox extends StatelessWidget {
     );
 
     return TextFormField(
+      keyboardAppearance: Brightness.light,
+      focusNode: focusNode,
       controller: textController,
       decoration: inputDecoration,
       onFieldSubmitted: (value) {
