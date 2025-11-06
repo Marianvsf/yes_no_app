@@ -1,6 +1,6 @@
 // codigo puro de dart
 
-enum FromWho { me, hers }
+enum FromWho { me, him }
 
 class Message {
   final String text;
